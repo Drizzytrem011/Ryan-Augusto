@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HUSH. Streetwear silencioso e moda premium. Design minimalista e qualidade absoluta para mentes focadas." />
+    <meta name="keywords" content="hush, quiet luxury, streetwear, moda dark, minimalismo, roupas premium" />
+    <meta name="theme-color" content="#050505" />
+    
+    <!-- Favicons (Gere e coloque na pasta public) -->
+    <link rel="icon" type="image/png" href="/logo.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hush.com.br/" />
+    <meta property="og:title" content="HUSH | Streetwear Silencioso" />
+    <meta property="og:description" content="O silêncio é o novo luxo. Descubra a coleção de vestuário premium." />
+    <meta property="og:image" content="https://picsum.photos/seed/hush-og-v2/1920/1080?grayscale" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="HUSH | Streetwear Silencioso" />
+    <meta property="twitter:description" content="O silêncio é o novo luxo." />
+    <meta property="twitter:image" content="https://picsum.photos/seed/hush-og-v2/1920/1080?grayscale" />
+
+    <title>HUSH | Streetwear Silencioso</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              black: '#050505',
+              darkgray: '#121212',
+              cardbg: '#1A1A1A',
+              accent: '#262626',
+              offwhite: '#F0F0F0',
+              concrete: '#888888',
+              success: '#10B981'
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              brand: ['Brasika', 'Syne', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            borderRadius: {
+              '2xl': '1rem',
+              '3xl': '1.5rem',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.6s ease-out forwards',
+              'slide-up': 'slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { opacity: '0', transform: 'translateY(40px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    
+    <!-- Fonts: Inter for text, Syne as a high-quality fallback -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <style>
+      /* Configuração Fonte BRASIKA */
+      @font-face {
+        font-family: "Brasika";
+        src: url("/fonts/Brasika.woff2") format("woff2"),
+             url("/fonts/Brasika.woff") format("woff");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      /* Classe utilitária para a marca */
+      .font-brand {
+        font-family: "Brasika", "Syne", sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      body {
+        background-color: #050505;
+        color: #F0F0F0;
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      /* Efeito Glassmorphism "Icon Glass" */
+      .glass {
+        background: rgba(20, 20, 20, 0.6); /* Mais escuro para contraste */
+        backdrop-filter: blur(12px) saturate(110%);
+        -webkit-backdrop-filter: blur(12px) saturate(110%);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+      }
+      
+      @media (max-width: 768px) {
+        .glass { 
+          backdrop-filter: blur(8px) saturate(100%); 
+          -webkit-backdrop-filter: blur(8px) saturate(100%);
+        }
+      }
+    </style>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
